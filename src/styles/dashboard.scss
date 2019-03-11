@@ -1,0 +1,186 @@
+.main-dashboard-wrapper {
+  padding-top: 70px;
+  display: flex;
+  .dashboard-sidebar {
+    height: calc(100vh - 70px);
+    transition: width 0.5s;
+    width: 70px;
+    max-width: calc(100% - 30px);
+    background-color: $primary;
+    color: $white;
+    overflow: visible;
+    position: relative;
+    @media screen and (max-width: 1600px) {
+      position: absolute;
+      z-index: 9;
+    }
+    @media screen and (max-width: 600px) {
+      left: -70px;
+    }
+    .dashboard-menus-wrapper {
+      height: 100%;
+      overflow: hidden auto;
+      .dashboard-menu {
+        display: flex;
+        align-items: center;
+        padding: 13px 17px;
+        @media screen and (max-height: 750px) {
+          padding: 8px 17px;
+        }
+        transition: all 0.5s;
+        cursor: pointer;
+        .dashboard-menu-icon {
+          max-width: 30px;
+          max-height: 30px;
+          min-width: 30px;
+          img {
+            max-width: 100%;
+            max-height: 100%;
+          }
+        }
+        .dashboard-menu-title {
+          padding-left: 15px;
+          padding-right: 15px;
+          font-family: Arsenal;
+          font-size: 1.11rem;
+          font-weight: normal;
+          line-height: 1.25;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .dashboard-menu-title {
+          color: $white;
+        }
+        &:hover {
+          background-color: $secondary;
+
+          .dashboard-menu-title {
+            color: $warning;
+            text-decoration: none;
+          }
+        }
+      }
+      .active {
+        .dashboard-menu {
+          background-color: $secondary;
+          .dashboard-menu-title {
+            color: $warning;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .dashboard-sidebar-opener {
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: -30px;
+      width: 30px;
+      height: 70px;
+      z-index: 100;
+      background: $primary;
+      margin: auto;
+      cursor: pointer;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 1em;
+        height: 1em;
+        border: 2px solid #fff;
+        border-width: 3px 0px 0px 3px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        left: 0;
+        right: 0;
+        transform: rotate(135deg) translateX(6px) translateY(5px);
+        transition: all 0.4s;
+      }
+    }
+    &.opened {
+      width: 370px;
+      .dashboard-menu {
+        padding: 13px 10px 13px 37px;
+        @media screen and (max-height: 750px) {
+          padding: 8px 10px 8px 37px;
+        }
+      }
+      .dashboard-sidebar-opener {
+        &:after {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+  .dashboard-content-area {
+    width: 100%;
+    height: calc(100vh - 70px);
+    overflow: auto;
+    &:not(.front-page) {
+      @media (min-width: 1601px) {
+        padding: 30px 50px;
+      }
+    }
+    &.calander-page {
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 0;
+    }
+
+    @media screen and (max-width: 1600px) and (min-width: 601px) {
+      padding-left: 70px;
+    }
+  }
+  .dashboard-card {
+    // height: 326px;
+    padding: 70px 120px;
+    box-shadow: 0 3px 50px 0 $black16;
+    background-color: $white;
+    @media screen and (max-width: 1300px) {
+      padding: 20px 50px;
+    }
+    @media screen and (max-width: 600px) {
+      padding: 20px 0px;
+    }
+  }
+  .dashboard-status-area {
+    padding: 70px 120px;
+    @media screen and (max-width: 1300px) {
+      padding: 20px 50px;
+    }
+    @media screen and (max-width: 600px) {
+      padding: 20px 0px;
+    }
+    .todo-list-wrapper {
+      padding: 15px;
+      width: 500px;
+      max-width: 100%;
+      .todo-list {
+        height: 50px;
+        border: 2px solid $primary;
+        color: $primary;
+        @include rounded;
+        padding: 5px 15px;
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+        & > div {
+          height: 100%;
+        }
+        p {
+          margin-bottom: auto;
+          margin-top: auto;
+        }
+        &.completed {
+          background-color: $primary;
+          color: $white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.card-modal-wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $black16;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .card-modal-inner {
+    width: 800px;
+    max-width: calc(100% - 40px);
+    position: relative;
+    min-height: 40vh;
+    box-shadow: 0 0 99px 0 $black16;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .card-modal-data {
+      width: 600px;
+      max-width: calc(100% - 30px);
+      color: $secondary;
+    }
+    .card-modal-close {
+      font-size: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      &:before {
+        transform: rotate(45deg);
+      }
+      &:after {
+        transform: rotate(-45deg);
+      }
+      &:before,
+      &:after {
+        content: "";
+        width: 2px;
+        height: 22px;
+        background: $primary;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+      }
+    }
+    .modal-loader {
+      width: 100px;
+    }
+  }
+}

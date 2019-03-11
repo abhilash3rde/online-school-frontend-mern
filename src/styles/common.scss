@@ -1,0 +1,301 @@
+.btn {
+  font-family: $mainfont;
+}
+.btn-w-1 {
+  width: 327px;
+  max-width: calc(100% - 20px);
+}
+.btn-w-2 {
+  width: 200px;
+  max-width: calc(100% - 20px);
+}
+.btn-small-1 {
+  font-size: $small-font;
+  font-weight: bold;
+  border-width: 2px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+.font-tin {
+  font-family: $subfont;
+}
+.font-ar {
+  font-family: $mainfont;
+}
+
+.section-gap {
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+.card-shadow {
+  box-shadow: 0 0 50px 0 $black16;
+  background-color: $white;
+}
+
+.banner-logo-padding {
+  padding-top: 35vh;
+}
+.inputs {
+  position: relative;
+  .error-msg {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 50px;
+    min-width: 30%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background: $warning;
+    font-family: Arsenal;
+    font-size: $small-font;
+    font-weight: bold;
+    line-height: 1.29;
+    color: $secondary;
+    z-index: 9;
+    @include rounded;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 0;
+      left: -19px;
+      border: 10px solid transparent;
+      border-right-color: $warning;
+    }
+  }
+  span.verifiedCheck {
+    width: 7px;
+    height: 16px;
+    display: block;
+    position: absolute;
+    right: 30px;
+    bottom: 19px;
+    border-bottom: 2px solid $primary;
+    border-right: 2px solid $primary;
+    transform: rotate(45deg);
+    &.has-eye {
+      right: 65px;
+    }
+  }
+  .search-icon {
+    position: absolute;
+    right: 0;
+    z-index: 3;
+    bottom: 2px;
+    height: 47px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2px;
+    cursor: pointer;
+    color: $secondary;
+  }
+  &.has-errors {
+    .input {
+      border-color: $warning;
+    }
+    .error-msg {
+      display: flex;
+    }
+  }
+  &.agree-input {
+    .error-msg {
+      height: 30px;
+      top: 0;
+      margin: auto;
+    }
+    @media (max-width: 470px) {
+      &.has-errors {
+        padding-top: 40px;
+        .error-msg {
+          top: 10px;
+          bottom: auto;
+          right: auto;
+          left: 0;
+          padding-left: 10px;
+          padding-right: 10px;
+          &::before {
+            left: 0;
+            right: 0;
+            bottom: -10px;
+            top: unset;
+          }
+        }
+      }
+      .checkbox-label {
+        max-width: 100%;
+      }
+    }
+  }
+  &.select-input {
+    .error-msg {
+      height: 30px;
+      bottom: 50px;
+      margin: auto;
+      &:before {
+        bottom: -20px;
+        top: unset;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border-top-color: $warning;
+        border-right-color: transparent;
+      }
+    }
+  }
+}
+.input {
+  height: 50px;
+  border: 2px solid $primary;
+  color: $primary;
+  @include rounded;
+  padding: 16px;
+  display: block;
+  width: 100%;
+  font-size: $small-font;
+  &::placeholder {
+    color: $primary50;
+  }
+  &:focus {
+    outline: none;
+  }
+  &.varified {
+    background-color: $primary16;
+  }
+}
+.input-checkbox {
+  display: none;
+  & + .checkbox-span {
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 10px;
+    background-color: $white;
+    border: 2px solid $primary;
+    vertical-align: middle;
+    margin-right: -1.6rem;
+    position: relative;
+    pointer-events: none;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0.4rem;
+      height: 0.7rem;
+      display: block;
+      border-right: 2px solid $white;
+      border-bottom: 2px solid $white;
+      left: 0px;
+      right: 0;
+      top: 0px;
+      bottom: 2px;
+      margin: auto;
+      transform: rotate(50deg);
+    }
+  }
+  &:checked {
+    + .checkbox-span {
+      background-color: $primary;
+    }
+  }
+}
+.checkbox-label {
+  cursor: pointer;
+}
+.label {
+  font-family: Arsenal;
+  font-size: 1rem;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.28;
+  letter-spacing: normal;
+  text-align: left;
+  color: $secondary;
+  margin-top: 10px;
+  margin-bottom: 6px;
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+  &.checkbox-label {
+    font-family: Tinos;
+    padding-left: 40px;
+    font-weight: normal;
+    max-width: 70%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &.has-icon {
+    svg {
+      cursor: pointer;
+    }
+  }
+  &.full {
+    width: 100%;
+  }
+}
+
+.password-tgl {
+  width: 30px;
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  cursor: pointer;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    box-shadow: 0px 1px 0 #c4beef;
+    transform: rotate(-40deg) translateX(-6px);
+    transform-origin: right top;
+    opacity: 0;
+  }
+  &.show {
+    &:before {
+      opacity: 1;
+    }
+  }
+}
+.h100 {
+  height: 100%;
+}
+
+.has-spinner {
+  pointer-events: none;
+  position: relative;
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 9;
+  }
+  &:before {
+    background-image: url("./assets/icons/loading.svg");
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: spin 1s linear infinite;
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

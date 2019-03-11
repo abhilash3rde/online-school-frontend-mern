@@ -1,0 +1,24 @@
+// @import url("https://fonts.googleapis.com/css?family=Arsenal:400,400i,700,700i|Tinos:400,400i,700,700i&subset=cyrillic-ext");
+@import "./assets/fonts/fonts.css";
+@import "./styles/mixins.scss";
+@import "./styles/OverRide.scss";
+
+@import "~bootstrap/scss/bootstrap";
+@import "./styles/light-bootstrap-dashboard.css";
+@import "./styles/Template.scss";
+@import "./styles/animate.css";
+@import "./styles/header.scss";
+@import "./styles/bannerform.scss";
+@import "./styles/index-page.scss";
+@import "./styles/cards.scss";
+@import "./styles/common.scss";
+@import "./styles/dashboard.scss";
+@import "./styles/footer.scss";
+@import "./styles/modal.scss";
+@import "./styles/extras.scss";
+@import "./styles/calander.scss";
+@import "./styles/chat.scss";
+@import "./styles/Content-management.scss";
+@import "./styles/programManagement.scss";
+@import "./styles/page404.scss";
+@import "./styles/chart.scss";

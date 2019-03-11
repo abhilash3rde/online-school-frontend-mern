@@ -1,0 +1,44 @@
+.banner-form {
+  width: 568px;
+  max-width: 100%;
+  margin: 100px auto 100px;
+  padding: 60px 50px 30px 50px;
+  @media screen and (max-width: 991px) {
+    margin-top: 50px;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 30px 20px;
+    margin-top: 0;
+  }
+  h2 {
+    margin-bottom: 20px;
+  }
+  .nav-tabs {
+    border: 2px solid $primary;
+    background: $primary;
+    padding: 1px 1px 2px 1px;
+    @include rounded;
+    .nav-item {
+      width: 50%;
+      background: transparent;
+      color: $white;
+      font-family: Arsenal;
+      // font-size: 32px;
+      font-weight: normal;
+      line-height: 1.25;
+      h4 {
+        @include rounded(8px);
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        max-height: 100%;
+        margin-bottom: 0;
+        &.active {
+          background: $white;
+          color: $primary;
+        }
+      }
+    }
+  }
+}

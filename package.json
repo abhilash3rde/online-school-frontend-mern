@@ -1,0 +1,80 @@
+{
+	"name": "usde",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"async-waterfall": "^0.1.5",
+		"axios": "^0.18.0",
+		"bootstrap": "^4.2.1",
+		"bootstrap-year-calendar": "^1.1.1",
+		"classnames": "^2.2.6",
+		"d3": "^5.9.0",
+		"debounce": "^1.2.0",
+		"dotenv": "^6.2.0",
+		"flickity": "^2.2.0",
+		"fullcalendar-reactwrapper": "^1.0.7",
+		"get-browser-language": "^1.0.0",
+		"imagesloaded": "^4.1.4",
+		"moment": "^2.24.0",
+		"node-sass": "^4.11.0",
+		"owl.carousel": "^2.3.4",
+		"query-string": "^6.2.0",
+		"react": "^16.7.0",
+		"react-addons-css-transition-group": "^15.6.2",
+		"react-big-calendar": "^0.20.3",
+		"react-cookie": "^3.0.8",
+		"react-d3-basic": "^1.6.11",
+		"react-d3-components": "^0.9.1",
+		"react-dom": "^16.7.0",
+		"react-easy-chart": "^1.0.0",
+		"react-flickity-component": "^3.2.0",
+		"react-icons-kit": "^1.2.1",
+		"react-owl-carousel": "^2.3.1",
+		"react-popper": "^1.3.3",
+		"react-redux": "^6.0.1",
+		"react-router-dom": "^4.3.1",
+		"react-scripts": "2.1.3",
+		"react-select": "^2.3.0",
+		"react-slick": "^0.23.2",
+		"react-transition-group": "^2.5.3",
+		"react-yearly-calendar": "^1.2.1",
+		"react_google_calendar": "^2.2.3",
+		"reactstrap": "^7.1.0",
+		"redux": "^4.0.1",
+		"redux-localstorage-simple": "^2.1.6",
+		"slick-carousel": "^1.8.1",
+		"socket.io-client": "^2.2.0",
+		"validator": "^10.11.0"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject",
+		"precommit": "lint-staged",
+		"prettify": "prettier --write \"./src/**/*.{js,jsx,json,css,scss,md}\""
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not ie <= 11",
+		"not op_mini all"
+	],
+	"devDependencies": {
+		"husky": "^1.3.1",
+		"lint-staged": "^8.1.3",
+		"prettier": "^1.16.4"
+	},
+	"lint-staged": {
+		"*.{js,jsx,json,css,scss,md}": [
+			"prettier --write",
+			"git add"
+		]
+	},
+	"engines": {
+		"node": "10"
+	}
+}

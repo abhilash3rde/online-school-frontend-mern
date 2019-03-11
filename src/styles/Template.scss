@@ -1,0 +1,44 @@
+body,
+p {
+  font-family: Tinos;
+}
+a {
+  font-size: inherit;
+}
+@media (min-width: 1680px) {
+  .container {
+    max-width: 1620px;
+  }
+}
+@media (min-width: 1400px) {
+  p {
+    font-size: 18px;
+  }
+  h1,
+  .h1 {
+    font-size: 72px;
+    font-family: Arsenal;
+  }
+  h2,
+  .h2 {
+    font-size: 48px;
+    font-family: Arsenal;
+  }
+  h3,
+  .h3 {
+    font-size: 36px;
+    font-family: Arsenal;
+  }
+  h4,
+  .h4 {
+    font-size: 32px;
+  }
+  h5,
+  .h5 {
+    font-size: 24px;
+  }
+  h6,
+  .h6 {
+    font-size: 20px;
+  }
+}

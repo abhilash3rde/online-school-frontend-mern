@@ -1,0 +1,205 @@
+.chat-box {
+  width: 465px;
+  max-height: 60vh;
+  position: fixed;
+  z-index: 99;
+  bottom: 0;
+  right: 60px;
+  box-shadow: 0 0 10px 0 $shadowColor;
+  background-color: $white;
+  .chat-header {
+    width: 100%;
+    background: $secondary;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 20px;
+    color: #fff;
+    cursor: pointer;
+    p {
+      margin: auto;
+      font-family: $mainfont;
+      font-size: 1.1rem;
+    }
+    .chat-icon {
+      width: 30px;
+      margin-right: 20px;
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .chat-header-left {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .chat-box-body {
+    // height: 100%;
+    overflow: hidden;
+    // display: none;
+    .chat-box-body-inner {
+      padding-left: 10px;
+      padding-right: 35px;
+      width: calc(100% + 25px);
+      max-height: calc(60vh - 50px);
+      min-height: calc(60vh - 50px);
+      overflow: auto;
+    }
+  }
+  .selected-chat-box {
+    max-height: inherit;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    padding-right: 10px;
+    padding-bottom: 70px;
+    padding-top: 80px;
+  }
+  .chat-type-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .chat-search {
+    position: sticky;
+    top: 0;
+    padding-bottom: 10px;
+    background: #fff;
+    z-index: 15;
+  }
+  .chat-user {
+    width: 100%;
+    height: 80px;
+    background-color: $primary16;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    cursor: pointer;
+    p {
+      font-family: $mainfont;
+      margin-bottom: 0;
+      font-weight: bold;
+      max-width: calc(100% - 55px);
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      color: $secondary;
+    }
+
+    .user-left-icon-one {
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 17px;
+      img {
+        min-width: 30px;
+      }
+    }
+    .user-left {
+      display: flex;
+      align-items: center;
+      max-width: calc(100% - 25px);
+      width: 100%;
+    }
+    &.new-msg {
+      background-color: $success;
+      .user-right-icon {
+        p {
+          padding: 10px;
+          border-radius: 5em;
+          line-height: 1;
+          color: $white;
+          background-color: $warning;
+        }
+      }
+    }
+    &.selected-header {
+      margin-left: -10px;
+      margin-top: 0px;
+      width: auto;
+      margin-right: -10px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+    }
+  }
+  .chat-message-wrapper {
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .chat-message-wrapper-inner {
+    width: calc(100% + 35px);
+    padding-right: 35px;
+    max-height: 100%;
+    overflow: hidden scroll;
+    &.no-msg {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      align-items: center;
+      justify-content: center;
+      p {
+        margin: auto;
+      }
+    }
+  }
+  .chat-message {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    .chat-message-text {
+      width: calc(100% - 70px);
+    }
+    p {
+      background-color: $lightBlue20;
+      @include rounded(5px);
+      padding: 15px;
+      font-family: $subfont;
+      display: block;
+      margin-bottom: 0;
+      font-size: 0.8889rem;
+    }
+    span {
+      line-height: 1;
+      font-size: 12px;
+      display: block;
+      padding: 3px 17px;
+    }
+    .chat-message-user-div {
+      width: 50px;
+      padding: 7px;
+    }
+    &.recieved {
+      flex-direction: row-reverse;
+    }
+  }
+  .chat-message.sended + .sended {
+    .chat-message-user-div {
+      img {
+        display: none;
+      }
+    }
+  }
+  .chat-message.recieved + .recieved {
+    .chat-message-user-div {
+      img {
+        display: none;
+      }
+    }
+  }
+}

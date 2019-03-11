@@ -1,0 +1,6 @@
+.btn-green {
+  @include button-variant($theme-green, $theme-green, $theme-green);
+}
+.btn-red {
+  @include button-variant($theme-red, $theme-red, $theme-red);
+}

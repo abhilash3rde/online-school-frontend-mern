@@ -1,0 +1,216 @@
+.calander-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  > div {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    table {
+      width: 100%;
+      text-align: center;
+      td,
+      th {
+        width: calc(100% / 7);
+        a,
+        span {
+          width: 100%;
+          display: block;
+          text-align: center;
+          font-family: $mainfont;
+          color: $secondary;
+          box-sizing: border-box;
+        }
+      }
+      th {
+        span {
+          font-weight: bold;
+          color: $primary;
+        }
+      }
+      .fc-other-month {
+        opacity: 0;
+      }
+      .fc .fc-head .fc-widget-header {
+        margin-top: 0.2em;
+      }
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      margin-bottom: 0;
+      padding-left: 10px;
+      font-weight: bold;
+      color: $secondary;
+      font-family: $subfont;
+    }
+  }
+  .fc-month-view .fc-scroller {
+    height: auto !important;
+  }
+  .fc-toolbar {
+    margin-top: 1em;
+    margin-bottom: 0.2em;
+  }
+}
+.year-view-wrapper {
+  > div {
+    width: 23%;
+    .fc-content-skeleton tbody {
+      display: none;
+    }
+    table {
+      .has-event a {
+        background-color: $primary16;
+      }
+    }
+    .fc-day-number {
+      cursor: pointer;
+      &:hover {
+        background-color: $black16;
+      }
+    }
+    .fc-other-month .fc-day-number {
+      pointer-events: none;
+    }
+  }
+}
+.month-view-wrapper {
+  > div {
+    width: 100%;
+  }
+
+  .fc-bg {
+    height: 100%;
+  }
+  .fc-bg table {
+    // height: 100%;
+  }
+  .fc-row.fc-rigid .fc-content-skeleton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  .fc-row {
+    position: relative;
+  }
+  .fc-bg table td {
+    // border: 1px solid;
+  }
+
+  td.fc-head-container {
+    padding-bottom: 0;
+  }
+
+  th.fc-day-header {
+    // border: 1px solid;
+  }
+
+  td.fc-head-container table {
+    // margin-bottom: -2px;
+  }
+  .fc-day-grid-event {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    width: calc(100% - 10px);
+    span {
+      text-align: left;
+    }
+  }
+  // tbody.fc-body {
+  //   border: 1px solid;
+  // }
+  // .fc-row.fc-week.fc-widget-content.fc-rigid:not(:last-child) {
+  //     border-bottom: 1px solid;
+  // }
+  // th.fc-day-header:not(:first-child):after {
+  //     content: '';
+  //     display: block;
+  //     position: absolute;
+  //     top: 0;
+  //     bottom: 0;
+  //     width: 1px;
+  //     background: #000;
+  // }
+  // .fc-view-container {
+  //     position: relative;
+  // }
+  // .fc-h-event {
+  //     background: #8c6f6f;
+  //     position: relative;
+  //     margin-left: 1px;
+  // }
+  // thead.fc-head {
+  //     border: 1px solid #000;
+  // }
+}
+
+.calander-header {
+  display: block;
+  // margin-left: -50px;
+  // margin-right: -50px;
+  padding: 5px 15px;
+  // margin-top: -30px;
+  box-shadow: 0 2px 15px $black16;
+  margin-bottom: 20px;
+  position: sticky;
+  top: 0px;
+  background: #fff;
+  z-index: 99;
+}
+.calander-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calander-inner > div {
+  display: flex;
+  align-items: center;
+}
+
+.calander-navigations .icons {
+  display: flex;
+  cursor: pointer;
+}
+
+.calander-filters .inputs {
+  white-space: nowrap;
+  padding-left: 20px;
+}
+.calander-filters .inputs .checkbox-label {
+  max-width: unset;
+}
+.calander-filters .inputs #views {
+  width: 150px;
+}
+.week-view-wrapper {
+  th.fc-axis,
+  .fc-agenda-view .fc-day-grid .fc-row .fc-content-skeleton td.fc-axis,
+  .fc-bg td.fc-axis,
+  .fc-time-grid .fc-slats td:first-child {
+    width: 80px !important;
+  }
+  .fc-time-grid .fc-slats td:nth-child(2),
+  td.fc-axis + td.fc-event-container,
+  .fc-agenda-view
+    .fc-day-grid
+    .fc-row
+    .fc-content-skeleton
+    td.fc-event-container {
+    width: calc(100% - 80px) !important;
+  }
+
+  .fc-agenda-view .fc-day-grid .fc-row .fc-content-skeleton td:not(.fc-axis),
+  .fc-bg td.fc-day {
+    width: calc((100% - 80px) / 7) !important;
+  }
+  .fc-toolbar.fc-header-toolbar {
+    display: none;
+  }
+  .fc-scroller.fc-time-grid-container {
+    height: auto !important;
+    overflow: hidden !important;
+  }
+}

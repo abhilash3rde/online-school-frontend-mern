@@ -1,0 +1,65 @@
+/*// @mixin font-face($name, $path, $weight: normal, $style: normal){
+//     @font-face {
+//         font-family: quote($name);
+//         font-weight: $weight;
+//         font-style:  $style;
+//         src: $path format("truetype");
+//     }
+// }
+// @include font-face(Arsenal, url("./Arsenal/Arsenal-Regular.ttf"), normal, normal);
+// @include font-face(Arsenal, url("./Arsenal/Arsenal-Italic.ttf"), normal, italic);
+// @include font-face(Arsenal, url("./Arsenal/Arsenal-Bold.ttf"), bold, normal);
+// @include font-face(Arsenal, url("./Arsenal/Arsenal-BoldItalic.ttf"), bold, italic);
+// @include font-face(Tinos, url("./Tinos/Tinos-Regular.ttf"), normal, normal);
+// @include font-face(Tinos, url("./Tinos/Tinos-Italic.ttf"), normal, italic);
+// @include font-face(Tinos, url("./Tinos/Tinos-Bold.ttf"), bold, normal);
+// @include font-face(Tinos, url("./Tinos/Tinos-BoldItalic.ttf"), bold, italic);*/
+
+@font-face {
+  font-family: "Arsenal";
+  font-weight: normal;
+  font-style: normal;
+  src: url("./Arsenal/Arsenal-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Arsenal";
+  font-weight: normal;
+  font-style: italic;
+  src: url("./Arsenal/Arsenal-Italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Arsenal";
+  font-weight: bold;
+  font-style: normal;
+  src: url("./Arsenal/Arsenal-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Arsenal";
+  font-weight: bold;
+  font-style: italic;
+  src: url("./Arsenal/Arsenal-BoldItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Tinos";
+  font-weight: normal;
+  font-style: normal;
+  src: url("./Tinos/Tinos-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Tinos";
+  font-weight: normal;
+  font-style: italic;
+  src: url("./Tinos/Tinos-Italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Tinos";
+  font-weight: bold;
+  font-style: normal;
+  src: url("./Tinos/Tinos-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Tinos";
+  font-weight: bold;
+  font-style: italic;
+  src: url("./Tinos/Tinos-BoldItalic.ttf") format("truetype");
+}

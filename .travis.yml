@@ -1,0 +1,21 @@
+language: node_js
+node_js: "10"
+sudo: false
+before_install:
+  - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 0.27.5
+  - export PATH=$HOME/.yarn/bin:$PATH
+cache:
+  yarn: true
+install: yarn install
+script:
+  - yarn test
+  - CI=false yarn build
+deploy:
+  skip_cleanup: true
+  provider: firebase
+  project: "usde-app"
+  token:
+    secure: Ml+snQ4Mg3Farg1wnVwuDc4zKop4qenMmuWB9UL2Bt4aqeT3p8+sWtVBMQl1tPUwfNA3hQZKGnNyakiBNVG536YJLibt2LC7Jf+ebu5fRKovmkqCLGkvgQKga9Wx+ciL1y9TpGlJ+ZEWydgnwS2+oclYKJXXwLGU3LgEXzhn/JTYLC1ZaaBRAPyCUYyXdM0DmbvhatvsbGsWG8OKjMvouZ/TqRc0XC7+35OKO5LwnimKi8H6njCjtfGnFDs2Gpko0medfGp9QVu1/tBXQBjp9Y9wspHEPhPTlItmgMyfyqAMxzHniSHkjnagpUXRgc+/bVVS4KTWfrPvbP0cGvIMDdtUgQ9N/pcv3RrdF7xh8WDWej9rBq6i8Pv4yYuMYzh3NreJ108R9GgAs9BE0MGExhBM7Fg8ayFnviJBHLXO1Qi1yu00DTgAhUPxpEjSr332jvsjWePrlnsqpsXV9INHCSDIKfJjhmL3huEsIKd3YjnRjIHn3oXVe4D2ssSsoYvWXg2tzjGKWAuZrXW4EMSz6kK7QqLadIwQZDm4uURSzezZ68VAcz8I66ugY+KLP076BDI+P/YSIBweACv23anQSfLw3Grj8lAOIHgQvf5C56uOHwRV4PMT8/OTJPYP8sV6IVyGrHD/H5ISgEk//yA3Hfwsy9u/xIFcZkj3MkHewf0=
+branches:
+  only:
+  - master

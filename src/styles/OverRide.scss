@@ -1,0 +1,28 @@
+$primary: #4133b7;
+$secondary: #160c69;
+$success: #fff5c3;
+$info: #c5c0f0;
+$warning: #ffdd2b;
+$danger: #a69d0e;
+$black16: rgba(0, 0, 0, 0.16);
+$primary50: rgba(65, 51, 183, 0.5);
+$primary16: rgba(65, 51, 183, 0.16);
+$info50: rgba(197, 192, 240, 0.5);
+$secondary50: rgba(22, 12, 105, 0.5);
+$theme-green: #33b737;
+$theme-red: #b73333;
+$shadowColor: $black16;
+$lightBlue: #cbe3fa;
+$lightBlue20: rgba(203, 227, 250, 0.2);
+@media (min-width: 1200px) {
+  :root {
+    font-size: 18px;
+  }
+}
+$grid-gutter-width: 40px;
+$small-font: 0.7778rem; // 14px;
+$small-font-2: 0.8889rem; // 16px;
+$tiny-font: 12px;
+
+$mainfont: "Arsenal", sans-sarif;
+$subfont: "Tinos", sans-sarif;

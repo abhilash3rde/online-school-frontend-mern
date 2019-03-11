@@ -1,0 +1,25 @@
+.vetical-card-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  & > div {
+    height: 100%;
+    & + div {
+      margin-top: 30px;
+    }
+  }
+}
+.progam-info-wrapper {
+  padding: 30px;
+}
+.program-switcher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  * {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}

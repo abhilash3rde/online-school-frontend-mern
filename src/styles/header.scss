@@ -1,0 +1,119 @@
+.App-logo {
+  width: 50px;
+}
+.main-header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 9999999999;
+  .icon {
+    padding: 10px;
+    cursor: pointer;
+    img {
+      width: 20px;
+    }
+  }
+  .dropdown-menu {
+    border: none;
+    box-shadow: 0 0 10px 0 $black16;
+    border-radius: 0;
+    min-width: auto;
+    &:before {
+      content: "";
+      width: 1rem;
+      height: 1rem;
+      display: block;
+      position: absolute;
+      top: -7px;
+      right: 10px;
+      background: $white;
+      transform: rotate(45deg);
+      z-index: -1;
+    }
+    img {
+      width: 30px;
+    }
+  }
+
+  .dropdown-item {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .dropdown-menu {
+    min-width: auto;
+  }
+}
+
+div[class^="col-"] {
+  .plain-card,
+  .full-card {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+}
+
+.plain-card {
+  background-color: $info50;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 40px 20px 30px;
+}
+
+.full-card {
+  background-color: $info50;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  .full-card-upper {
+    padding: 30px 50px 10px;
+    .full-card-img {
+      margin-bottom: 30px;
+      border-radius: 50%;
+    }
+    h6 {
+      margin-bottom: 0;
+      & + small {
+        margin-top: -0.3em;
+        display: block;
+        margin-bottom: 1em;
+      }
+    }
+    .full-card-content {
+      line-height: 1.33;
+      height: calc(4em * 1.33);
+      overflow: hidden;
+    }
+  }
+  .full-card-footer {
+    background-color: $info;
+    padding: 10px;
+  }
+  .very-small {
+    font-size: 11px;
+    margin-bottom: 1em;
+    color: $white;
+  }
+  .card-student-thumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & > * {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 3px solid $warning;
+      &:not(:first-child) {
+        margin-left: -30px;
+      }
+    }
+    .student-thumb-number {
+      background: $white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arsenal;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  }
+}

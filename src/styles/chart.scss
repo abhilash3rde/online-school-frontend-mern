@@ -1,0 +1,22 @@
+.chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+}
+
+.chart-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.chart-container [class^="legend-container"] {
+  position: absolute;
+  li {
+    font-size: 2.667rem;
+    font-family: $mainfont;
+    color: $secondary;
+    font-weight: bold;
+  }
+}
