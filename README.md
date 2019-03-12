@@ -1,6 +1,6 @@
 # USDE
 
-## User ierarchy
+## User Hierarchy
 1. **Student** Is the smallest level of users. List of available functionalities:
   - Dashboard
   - Schedule calendar
